@@ -2,15 +2,18 @@ import React from 'react'
 import './Css.css'
 require
 
+function addCartItems (shirts){
+  return shirts.reduce((total, shirt)  => {
+    return total + shirt.price
+  },0)
 
+}
 
-// showInput()
-// <input type="text" ref={(input)=> {this.text = input} }/>
 
 const ShirtList = ({ shirts, cartItems, shirtTypes, addShirt, removeShirt }) => (
 
 <div>
-<p> Cart Items{cartItems} </p>
+<p> Cart Items: {cartItems} </p>
   <ul className="shirts">
     {shirtTypes.map((shirtType, index ) => {
       let src = require(shirtType.src)
@@ -36,7 +39,7 @@ const ShirtList = ({ shirts, cartItems, shirtTypes, addShirt, removeShirt }) => 
     {shirts.map((shirt, index)=> {
       let src = require(shirt.src)
       return (
-        <li className="cart"key={index}>
+        <li className="cart" key={index} >
         <div className="cartItems">
           <img className="cartPic" src={src} alt="picture"/>
           <div className="shirtBox">
@@ -51,7 +54,13 @@ const ShirtList = ({ shirts, cartItems, shirtTypes, addShirt, removeShirt }) => 
       )
     })}
   </ul>
-  <button > calculate price </button>
+  <p>Total Price: <span> ${shirts.length === 0 ? 0 : addCartItems(shirts)} </span></p>
 </div>
 )
+
+
+
+
+
+
 export default ShirtList

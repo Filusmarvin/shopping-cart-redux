@@ -17,28 +17,28 @@ const initialState = {
       src: './images/Goku.jpg',
       color: 'Blue',
       size: 'Small',
-      price: '45'
+      price: 45
     },
     {
       name: 'Naruto',
       src: './images/Naruto.png',
       color: 'Orange',
       size: 'Medium',
-      price: '15'
+      price: 15
     },
     {
       name: 'Luffy',
       src: './images/Luffy.jpg',
       color: 'blue',
       size: 'Small',
-      price: '29'
+      price: 29
     },
     {
       name: 'Natsu',
       src: './images/Natsu.png',
       color: 'Orange',
       size: 'Small',
-      price: '19'
+      price: 19
     }
   ]
 }
