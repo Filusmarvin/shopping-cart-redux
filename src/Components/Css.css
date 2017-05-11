@@ -1,0 +1,51 @@
+.shirts{
+  display: flex;
+  justify-content: space-between;
+}
+.shirt-cart{
+
+}
+.buttons{
+  display: flex;
+  justify-content: center;
+}
+
+button{
+  background-color: cyan;
+  border: 1px solid black;
+}
+img{
+  width: 150px;
+}
+ul{
+  padding:0px;
+  margin:0px;
+  display: flex;
+flex-wrap: wrap;
+}
+li {
+  border: 1px solid cyan;
+  list-style: none;
+  margin:10px;
+}
+
+.addButton{
+  justify-content: center;
+}
+
+.cartPic{
+  width: 70px;
+  height:90px;
+}
+
+.cart{
+  font-size: 10px;
+}
+.cartItems{
+  display: flex;
+}
+
+.footer{
+  display:flex;
+  justify-content: space-between;
+}
